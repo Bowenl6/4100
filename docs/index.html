@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Income Variation</title>
+  <meta name="description" content="Income Variation" />
+  <meta name="generator" content="bookdown 0.24 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Income Variation" />
+  <meta property="og:type" content="book" />
+  
+  
+  
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Income Variation" />
+  
+  
+  
+
+<meta name="author" content="Bowen Liang" />
+
+
+<meta name="date" content="2023-04-23" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+
+<link rel="next" href="data-sources.html"/>
+<script src="libs/header-attrs-2.11/header-attrs.js"></script>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
+
+
+
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">incomevar</a></li>
+<li class="divider"></li>
+<li><a href="index.html#introduction" id="toc-introduction"><span class="toc-section-number">1</span> Introduction</a></li>
+<li><a href="data-sources.html#data-sources" id="toc-data-sources"><span class="toc-section-number">2</span> Data sources</a></li>
+<li><a href="data-transformation.html#data-transformation" id="toc-data-transformation"><span class="toc-section-number">3</span> Data transformation</a>
+<ul>
+<li><a href="data-transformation.html#the-transformation-process-for-fm_ern" id="toc-the-transformation-process-for-fm_ern"><span class="toc-section-number">3.1</span> The Transformation Process for fm_ern</a></li>
+<li><a href="data-transformation.html#the-transformation-process-for-house_67_20" id="toc-the-transformation-process-for-house_67_20"><span class="toc-section-number">3.2</span> The Transformation Process for house_67_20</a></li>
+<li><a href="data-transformation.html#the-transformation-process-for-data_15_16-data_17_18-and-data_19_20" id="toc-the-transformation-process-for-data_15_16-data_17_18-and-data_19_20"><span class="toc-section-number">3.3</span> The Transformation Process for data_15_16, data_17_18 and data_19_20</a></li>
+<li><a href="data-transformation.html#the-transformation-process-for-shape-of-employment-in-nonagricultural-for-female" id="toc-the-transformation-process-for-shape-of-employment-in-nonagricultural-for-female"><span class="toc-section-number">3.4</span> The transformation process for Shape of Employment in Nonagricultural for Female</a></li>
+</ul></li>
+<li><a href="missing-values.html#missing-values" id="toc-missing-values"><span class="toc-section-number">4</span> Missing values</a></li>
+<li><a href="results.html#results" id="toc-results"><span class="toc-section-number">5</span> Results</a>
+<ul>
+<li><a href="results.html#gender-influence-in-income" id="toc-gender-influence-in-income"><span class="toc-section-number">5.1</span> Gender Influence in Income</a></li>
+<li><a href="results.html#race-influence-in-income" id="toc-race-influence-in-income"><span class="toc-section-number">5.2</span> Race influence in Income</a></li>
+<li><a href="results.html#other-influence-in-income" id="toc-other-influence-in-income"><span class="toc-section-number">5.3</span> Other Influence in Income</a></li>
+</ul></li>
+<li><a href="interactive-component.html#interactive-component" id="toc-interactive-component"><span class="toc-section-number">6</span> Interactive component</a></li>
+<li><a href="conclusion.html#conclusion" id="toc-conclusion"><span class="toc-section-number">7</span> Conclusion</a></li>
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Income Variation</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="header">
+<h1 class="title">Income Variation</h1>
+<p class="author"><em>Bowen Liang</em></p>
+<p class="date"><em>2023-04-23</em></p>
+</div>
+<div id="introduction" class="section level1" number="1">
+<h1><span class="header-section-number">1</span> Introduction</h1>
+<p>The main focus of this research project is to study the factors that contribute to income inequality and to identify patterns that can help individuals better understand and choose employment environments and related industries. As overall income levels continue to rise, income disparities are also increasing due to various reasons. Moreover, significant income disparities can lead to a range of consequences, posing serious challenges to future socio-economic development. Inclusive economic growth is not only a matter of social justice, but also a requirement for sustained economic growth and social stability. Most people agree that reducing income disparities is necessary, and understanding the causes of wealth gaps is worth pursuing.</p>
+<p>In this analysis, I primarily compare the median income levels and gender over a period of time horizontally, as well as compare key factors such as race, region, family type, education, and age with income levels vertically in the same time period. This type of statistical analysis can help us address questions about the widening gap between men’s and women’s incomes, the impact of race and ethnicity on income, and changes in income across different types of households.</p>
+
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+
+<a href="data-sources.html" class="navigation navigation-next navigation-unique" aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"whatsapp": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": null,
+"search": {
+"engine": "fuse",
+"options": null
+},
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+</body>
+
+</html>

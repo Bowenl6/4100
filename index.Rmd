@@ -1,0 +1,13 @@
+--- 
+title: "Income Variation"
+author: "Bowen Liang"
+date: "`r Sys.Date()`"
+site: bookdown::bookdown_site
+---
+
+
+# Introduction
+
+The main focus of this research project is to study the factors that contribute to income inequality and to identify patterns that can help individuals better understand and choose employment environments and related industries. As overall income levels continue to rise, income disparities are also increasing due to various reasons. Moreover, significant income disparities can lead to a range of consequences, posing serious challenges to future socio-economic development. Inclusive economic growth is not only a matter of social justice, but also a requirement for sustained economic growth and social stability. Most people agree that reducing income disparities is necessary, and understanding the causes of wealth gaps is worth pursuing.
+
+In this analysis, I primarily compare the median income levels and gender over a period of time horizontally, as well as compare key factors such as race, region, family type, education, and age with income levels vertically in the same time period. This type of statistical analysis can help us address questions about the widening gap between men's and women's incomes, the impact of race and ethnicity on income, and changes in income across different types of households.

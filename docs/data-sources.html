@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>2 Data sources | Income Variation</title>
+  <meta name="description" content="2 Data sources | Income Variation" />
+  <meta name="generator" content="bookdown 0.24 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="2 Data sources | Income Variation" />
+  <meta property="og:type" content="book" />
+  
+  
+  
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="2 Data sources | Income Variation" />
+  
+  
+  
+
+<meta name="author" content="Bowen Liang" />
+
+
+<meta name="date" content="2023-04-18" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="index.html"/>
+<link rel="next" href="data-transformation.html"/>
+<script src="libs/header-attrs-2.11/header-attrs.js"></script>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
+
+
+
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">incomevar</a></li>
+<li class="divider"></li>
+<li><a href="index.html#introduction" id="toc-introduction"><span class="toc-section-number">1</span> Introduction</a></li>
+<li><a href="data-sources.html#data-sources" id="toc-data-sources"><span class="toc-section-number">2</span> Data sources</a></li>
+<li><a href="data-transformation.html#data-transformation" id="toc-data-transformation"><span class="toc-section-number">3</span> Data transformation</a>
+<ul>
+<li><a href="data-transformation.html#the-transformation-process-for-fm_ern" id="toc-the-transformation-process-for-fm_ern"><span class="toc-section-number">3.1</span> The Transformation Process for fm_ern</a></li>
+<li><a href="data-transformation.html#the-transformation-process-for-house_67_20" id="toc-the-transformation-process-for-house_67_20"><span class="toc-section-number">3.2</span> The Transformation Process for house_67_20</a></li>
+<li><a href="data-transformation.html#the-transformation-process-for-data_15_16-data_17_18-and-data_19_20" id="toc-the-transformation-process-for-data_15_16-data_17_18-and-data_19_20"><span class="toc-section-number">3.3</span> The Transformation Process for data_15_16, data_17_18 and data_19_20</a></li>
+<li><a href="data-transformation.html#the-transformation-process-for-shape-of-employment-in-nonagricultural-for-female" id="toc-the-transformation-process-for-shape-of-employment-in-nonagricultural-for-female"><span class="toc-section-number">3.4</span> The transformation process for Shape of Employment in Nonagricultural for Female</a></li>
+</ul></li>
+<li><a href="missing-values.html#missing-values" id="toc-missing-values"><span class="toc-section-number">4</span> Missing values</a></li>
+<li><a href="results.html#results" id="toc-results"><span class="toc-section-number">5</span> Results</a>
+<ul>
+<li><a href="results.html#gender-influence-in-income" id="toc-gender-influence-in-income"><span class="toc-section-number">5.1</span> Gender Influence in Income</a></li>
+<li><a href="results.html#race-influence-in-income" id="toc-race-influence-in-income"><span class="toc-section-number">5.2</span> Race influence in Income</a></li>
+<li><a href="results.html#other-influence-in-income" id="toc-other-influence-in-income"><span class="toc-section-number">5.3</span> Other Influence in Income</a></li>
+</ul></li>
+<li><a href="interactive-component.html#interactive-component" id="toc-interactive-component"><span class="toc-section-number">6</span> Interactive component</a></li>
+<li><a href="conclusion.html#conclusion" id="toc-conclusion"><span class="toc-section-number">7</span> Conclusion</a></li>
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Income Variation</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="data-sources" class="section level1" number="2">
+<h1><span class="header-section-number">2</span> Data sources</h1>
+<p>I collect data sets from United States Census Bureau and United Nations Development Program. Totally, I have 6 data sets:</p>
+<ol style="list-style-type: decimal">
+<li><code>Table A-1</code>, <code>Table A-2</code> and <code>Table A-7</code> from <a href="https://www.census.gov/library/publications/2021/demo/p60-273.html" class="uri">https://www.census.gov/library/publications/2021/demo/p60-273.html</a><br />
+</li>
+<li><code>Table A-1</code> from <a href="https://www.census.gov/data/tables/2019/demo/income-poverty/p60-266.html" class="uri">https://www.census.gov/data/tables/2019/demo/income-poverty/p60-266.html</a><br />
+</li>
+<li><code>Table A-1</code> from <a href="https://www.census.gov/library/publications/2018/demo/p60-263.html" class="uri">https://www.census.gov/library/publications/2018/demo/p60-263.html</a><br />
+</li>
+<li><code>Share of Employment in Nonagriculture for Female (% of total employment in nonagriculture)</code> from UNDP human development report. <a href="https://hdr.undp.org/en/indicators/175106" class="uri">https://hdr.undp.org/en/indicators/175106</a></li>
+</ol>
+<p>The three <code>Tables A-1</code> show the same information in the column such as Race and Ethnicity, location, education, etc. The only difference among them is time. So we will put them together and analyze the data from time series and cross-section directions.<br />
+<code>Table A-2</code> and <code>Table A-7</code> are time-series data from 1960 to 2020. <code>Table A-2</code> separates the household income into 9 groups and show the number of household by different race group. <code>Table A-7</code> compares the income of females and males.<br />
+<code>Shape of Employment in Nonagricultural for Female</code> represents the data during 1991-2019 and it contains the employment proportion of female in nonagricultural industry in 180 countries, in five different type of human developments and in 10 different regions.</p>
+<p>According to time, the three <code>Table A-1</code> have name data_15_16, data_17_18 and data_19_20 in this report. <code>Table A-2</code> and <code>Table A-7</code> are called house_67_20 and fm_ern respectively. The <code>Shape of Employment in Nonagricultural for Female</code> can easily separate the data to three different sheets, the split method will show after. All of them are informational and support our project; however, the majority of data sets are not readable for programming. Our first step in this project is to transform and clean these data.</p>
+
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="index.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="data-transformation.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"whatsapp": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": null,
+"search": {
+"engine": "fuse",
+"options": null
+},
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+</body>
+
+</html>
